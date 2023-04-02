@@ -2,7 +2,7 @@
 
 
 
-Console.WriteLine("Escribe algo y presiona Ctrl+F para finalizar el programa.");
+Console.WriteLine("Escribe lo que quiera y presiona Ctrl+F para finalizar el programa.");
 
 while (true)
 {
