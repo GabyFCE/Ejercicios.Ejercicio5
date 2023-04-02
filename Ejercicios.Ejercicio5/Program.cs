@@ -1,7 +1,23 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-    Console.WriteLine("Ingrese lo que quiera, el programa finalizará con ctrl+F");
-ConsoleKeyInfo c;
-while ((c = Console.ReadKey()).Modifiers != ConsoleModifiers.Control
-       || c.Key != ConsoleKey.F) { } //Exit on Ctrl + F
+
+
+Console.WriteLine("Escribe algo y presiona Ctrl+F para finalizar el programa.");
+
+while (true)
+{
+    ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+    if (keyInfo.Modifiers == ConsoleModifiers.Control && keyInfo.Key == ConsoleKey.F)
+    {
+        Console.WriteLine("\nPrograma finalizado.");
+        break;
+    }
+    else
+    {
+        Console.Write(keyInfo.KeyChar);
+    }
+}
+    
+
+
 
